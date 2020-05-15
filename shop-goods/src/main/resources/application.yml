@@ -1,0 +1,45 @@
+server:
+  port: 1001
+  context-path: /
+
+# 数据源配置
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.199.234:3306/db_goods
+    username: root
+    password: 1qaz!QAZ
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  thymeleaf:
+    cache: false
+  application:
+    name: shop-goods
+
+eureka:
+
+  instance:
+
+    hostname: localhost  #eureka客户端主机实例名称
+
+    appname: shop-goods  #客户端服务名
+
+    instance-id: shop-goods:1001 #客户端实例名称
+
+    prefer-ip-address: true #显示IP
+
+  client:
+
+    service-url:
+
+      defaultZone: http://localhost:3001/eureka   #把服务注册到eureka注册中心
+
+info:
+
+  负责人: pengxiaokai
+
+  联系电话: 13526748987
+
