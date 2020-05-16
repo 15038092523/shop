@@ -1,14 +1,14 @@
 package com.goods.client;
 
 import com.goods.dto.GoodsDto;
+import com.goods.fallback.GoodsClientFallbackFactory;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Map;
 
-
-@FeignClient(value = "SHOP-GOODS")
+@FeignClient(value = "SHOP-GOODS", fallbackFactory = GoodsClientFallbackFactory.class)
 @RequestMapping("/goods")
 public interface GoodsClient {
 

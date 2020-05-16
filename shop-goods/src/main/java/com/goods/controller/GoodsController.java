@@ -53,7 +53,7 @@ public class GoodsController {
     @ResponseBody
     @GetMapping(value = "/getInfo")
     public Map<String, Object> getInfo() throws InterruptedException {
-        Thread.sleep(900);
+        Thread.sleep(1000);
         return goodsService.getInfo();
     }
 }
