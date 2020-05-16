@@ -15,6 +15,7 @@
         <module>shop-customer</module>
         <module>shop-customer-sdk</module>
         <module>shop-eureka-server</module>
+        <module>shop-hystrix-dashboard</module>
     </modules>
 
 

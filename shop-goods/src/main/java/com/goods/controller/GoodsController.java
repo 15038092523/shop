@@ -3,6 +3,7 @@ package com.goods.controller;
 import com.goods.dto.GoodsDto;
 import com.goods.mapper.GoodsMapper;
 import com.goods.service.GoodsService;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -52,6 +53,7 @@ public class GoodsController {
 
     @ResponseBody
     @GetMapping(value = "/getInfo")
+    @HystrixCommand
     public Map<String, Object> getInfo() throws InterruptedException {
         Thread.sleep(1000);
         return goodsService.getInfo();

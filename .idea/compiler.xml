@@ -13,6 +13,7 @@
         <module name="shop-eureka-server" />
         <module name="shop-goods" />
         <module name="shop-goods-sdk" />
+        <module name="shop-hystrix-dashboard" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
