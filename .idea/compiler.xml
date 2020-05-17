@@ -11,6 +11,7 @@
         <module name="shop-customer" />
         <module name="shop-customer-sdk" />
         <module name="shop-eureka-server" />
+        <module name="shop-gateway" />
         <module name="shop-goods" />
         <module name="shop-goods-sdk" />
         <module name="shop-hystrix-dashboard" />

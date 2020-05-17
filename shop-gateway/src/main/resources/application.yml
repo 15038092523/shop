@@ -1,0 +1,37 @@
+server:
+
+  port: 5001
+
+  context-path: /
+
+
+spring:
+
+  application:
+
+    name: shop-gateway
+
+
+eureka:
+
+  instance:
+
+    instance-id: shop-gateway:5001 #客户端实例名称
+
+    prefer-ip-address: true #显示IP
+
+  client:
+
+    service-url:
+
+      defaultZone: http://localhost:3001/eureka/
+
+zuul:
+  ignored-services: "*"
+  routes:
+    goodsServer.serviceId: shop-goods
+    goodsServer.path: /goods/**
+    customerServer.serviceId: shop-customer
+    customerServer.path: /customer/**
+  prefix: /shop
+
