@@ -1,11 +1,8 @@
 package com.gateway.filter;
 
 import com.netflix.zuul.ZuulFilter;
-import com.netflix.zuul.context.RequestContext;
 import com.netflix.zuul.exception.ZuulException;
 import org.apache.log4j.Logger;
-
-import javax.servlet.http.HttpServletRequest;
 
 public class AccessFilter extends ZuulFilter {
 
@@ -25,7 +22,7 @@ public class AccessFilter extends ZuulFilter {
      */
     @Override
     public Object run() throws ZuulException {
-        RequestContext ctx = RequestContext.getCurrentContext();
+        /*RequestContext ctx = RequestContext.getCurrentContext();
         HttpServletRequest request = ctx.getRequest();
         String parameter = request.getParameter("accessToken");
         logger.info(request.getRequestURL().toString() + " 请求访问");
@@ -38,6 +35,7 @@ public class AccessFilter extends ZuulFilter {
         }
         //  token判断逻辑
         logger.info(request.getRequestURL().toString() + " 请求成功");
+        return null;*/
         return null;
     }
 

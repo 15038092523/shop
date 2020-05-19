@@ -1,6 +1,7 @@
 package com.goods.controller;
 
 import com.goods.dto.GoodsDto;
+import com.goods.kafka.KafkaMessageSendService;
 import com.goods.mapper.GoodsMapper;
 import com.goods.service.GoodsService;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
@@ -20,6 +21,10 @@ public class GoodsController {
 
     @Autowired
     private GoodsMapper goodsMapper;
+
+    @Autowired
+    private KafkaMessageSendService kafkaMessageSendService;
+
 
     /**
      * 根据id查询商品
@@ -43,6 +48,7 @@ public class GoodsController {
 
     @GetMapping(value = "/list")
     public List<GoodsDto> list() {
+        kafkaMessageSendService.send();
         return goodsMapper.entitiesToDtos(goodsService.findAll());
     }
 

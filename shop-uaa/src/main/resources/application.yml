@@ -1,0 +1,8 @@
+server:
+  port: 1001
+  context-path: /
+
+spring:
+  redis:
+    host: 192.168.199.234
+

@@ -17,6 +17,7 @@
         <module>shop-eureka-server</module>
         <module>shop-hystrix-dashboard</module>
         <module>shop-gateway</module>
+        <module>shop-uaa</module>
     </modules>
 
 

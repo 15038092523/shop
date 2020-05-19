@@ -2,7 +2,6 @@ server:
   port: 2001
   context-path: /
 
-
 eureka:
   client:
     register-with-eureka: true #false 由于注册中心的职责就是维护服务实例，它并不需要去检索服务，所以也设置为false
@@ -10,9 +9,7 @@ eureka:
       defaultZone: http://localhost:3001/eureka/
 
   instance:
-
     instance-id: shop-customer:2001 #客户端实例名称
-
     prefer-ip-address: true #显示IP
 
 feign:
@@ -20,7 +17,14 @@ feign:
     enabled: true
 
 spring:
-
   application:
-
     name: shop-customer
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/customer
+
+
+
+
+
+
