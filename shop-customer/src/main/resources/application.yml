@@ -23,7 +23,10 @@ spring:
     mongodb:
       uri: mongodb://localhost:27017/customer
 
-
+  redis:
+    host: 192.168.199.234
+    port: 6379
+    password: foobared
 
 
 
